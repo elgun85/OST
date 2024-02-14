@@ -150,9 +150,18 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <span>Sign Out</span>
+          {{--              <a class="dropdown-item d-flex align-items-center" href="#">
+                            <i class="bi bi-box-arrow-right"></i>--}}
+
+                            <a href="{{route('logout')}}" class="btn btn-outline-danger dropdown-item d-flex align-items-center"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Çıxış</span>
+                            </a>
+                            <form action="{{route('logout')}}" id="logout-form" method="POST">
+                                @csrf
+                            </form>
+
                         </a>
                     </li>
 
